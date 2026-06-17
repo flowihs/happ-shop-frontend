@@ -1,0 +1,420 @@
+.NavigationMenu {
+    width: 100%;
+    background: #ffffff;
+    position: relative;
+    z-index: 1000;
+}
+
+.NavigationMenuContainer {
+    border-bottom: 1px solid #F1F4F6;
+    max-width: 1920px;
+    margin: 0 auto;
+    width: auto;
+    display: flex;
+    padding: 16px 50px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    z-index: 2000;
+    background: white;
+    position: relative;
+}
+
+.NavigationMenuLeftWrapper {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+}
+
+.NavigationMenuLogo {
+    font-size: 36px;
+    color: #2A7FFF;
+    font-family: "Onest Bold", sans-serif;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.NavigationMenuCategoryWrapper {
+    position: relative;
+}
+
+.NavigationMenuCategory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+    color: #2A7FFF;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #F1F4F6;
+    fill: #2A7FFF;
+    stroke: #2A7FFF;
+}
+
+.NavigationMenuCategory:hover {
+    background-color: #2A7FFF;
+    color: white;
+    fill: white;
+    stroke: white;
+}
+
+.NavigationMenuCategory.is-active {
+    background-color: #355FFF;
+    color: white;
+    fill: white;
+    stroke: white;
+}
+
+.NavigationMenuCategoryIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.burger-line {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.burger-line-1 {
+    transform-origin: 12px 7px;
+}
+
+.burger-line-2 {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-line-3 {
+    transform-origin: 12px 17px;
+}
+
+.NavigationMenuCategory.is-active .burger-line-1 {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.NavigationMenuCategory.is-active .burger-line-2 {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.NavigationMenuCategory.is-active .burger-line-3 {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.BurgerMenuButton.is-active .burger-line-1 {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.BurgerMenuButton.is-active .burger-line-2 {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.BurgerMenuButton.is-active .burger-line-3 {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.NavigationMenuDropdownItem {
+    display: block;
+    padding: 10px 16px;
+    color: #333333;
+    font-size: 16px;
+    font-family: "Onest Regular", sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.NavigationMenuDropdownItem:hover {
+    background: #F1F4F6;
+    color: #2A7FFF;
+}
+
+.NavigationMenuAuthButton {
+    color: #909090;
+    font-size: 18px;
+    font-family: "Onest Regular", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.NavigationMenuAuthButtonSvg {
+    width: 20px;
+    height: 20px;
+}
+
+.NavigationMenuAuthButton:hover {
+    background: #F7F7F7;
+    color: #333333;
+}
+
+.NavigationMenuSearchIcon {
+    width: 24px;
+    height: 24px;
+    stroke: #2A7FFF;
+}
+
+.NavigationMenuSearch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    outline: 1px solid #2A7FFF;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.NavigationMenuSearchInput {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    color: #333333;
+    caret-color: #2A7FFF;
+    width: 100%;
+}
+
+.NavigationMenuSearchInput:focus::placeholder {
+    padding-left: 6px;
+    transition: all 0.3s ease;
+    color: rgba(42, 127, 255, 0.53);
+}
+
+.NavigationMenuSearchButton {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 100px;
+    background: #2A7FFF;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.NavigationMenuSearchButton:hover {
+    background: #355FFF;
+}
+
+.CategoryMenu {
+    background: white;
+    width: 100%;
+    z-index: 1998;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.CategoryMenuContainer {
+    position: relative;
+    padding: 30px 50px;
+    height: 80vh;
+    z-index: 1999;
+    background: white;
+    display: flex;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.BlurBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.CategoryMenuLeftWrapper {
+    flex: 1;
+    padding-right: 12px;
+    border-right: 1px solid #F1F4F6;
+}
+
+.CategoryMenuLeftWrapperItem {
+    display: flex;
+    gap: 12px;
+    font-family: "Onest Regular", sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.CategoryMenuLeftWrapperItem:hover {
+    background: #F7F7F7;
+}
+
+.CategoryMenuLeftWrapperItemImage {
+    width: 24px;
+    height: 24px;
+}
+
+.CategoryMenuRightWrapper {
+    flex: 2;
+}
+
+.CategoryMenuRightWrapperContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: "Onest Bold", sans-serif;
+}
+
+.CategoryMenuRightWrapper {
+    padding-left: 40px;
+}
+
+.CategoryMenuRightWrapperList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.CategoryMenuRightWrapperItem {
+    cursor: pointer;
+    color: #666666;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.CategoryMenuRightWrapperItem:hover {
+    color: #333333;
+}
+
+.CategoryMenuRightWrapperTitle {
+    font-size: 24px;
+}
+
+.NavigationMenuSearch.IsMobile {
+    display: none;
+}
+
+.NavigationMenuSearchIcon.IsMobile {
+    display: none;
+}
+
+.NavigationMenuCategoryIcon.IsMobile {
+    display: none;
+}
+
+.BurgerMenuButtonContainer {
+    display: none;
+}
+
+.BurgerMenuButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    stroke: #2A7FFF;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .NavigationMenuCategory {
+        display: none;
+    }
+
+    .NavigationMenu {
+        position: relative;
+    }
+
+    .NavigationMenuContainer {
+        gap: 20px;
+        padding: 16px 20px;
+        flex-wrap: wrap;
+    }
+
+    .NavigationMenuAuthButton {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        background: #F7F7F7;
+        color: #333333;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .NavigationMenuLeftWrapper {
+        gap: 0;
+    }
+
+    .NavigationMenuLogo {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .NavigationMenuSearch {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .NavigationMenuSearchButton {
+        display: none;
+    }
+
+    .NavigationMenuLogoContainer {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding-top: 8px;
+    }
+
+    .BurgerMenuButtonContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .NavigationMenuAuthButtonSvg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .NavigationMenuAuthButton {
+        padding: 16px 32px;
+    }
+
+    .BurgerMenuButton {
+        width: 36px;
+        height: 36px;
+    }
+}
