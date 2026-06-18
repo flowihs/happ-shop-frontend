@@ -167,7 +167,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                         </div>
                     </div>
 
-                    <a className="NavigationMenuAuthButton">
+                    <a className="NavigationMenuAuthButton" href="/auth">
                         <svg
                             className="NavigationMenuAuthButtonSvg"
                             xmlns="http://www.w3.org/2000/svg"
