@@ -1,0 +1,72 @@
+.Profile {
+    display: flex;
+    padding-top: 40px;
+    gap: 32px;
+}
+
+.ProfileNavigationMenu {
+    width: 260px;
+    border-right: 1px solid #F1F4F6;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-right: 16px;
+}
+
+.ProfileNavigationMenuTitle {
+    font-family: "Onest Regular", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    color: #000000;
+}
+
+.ProfileNavigationMenuButton {
+    min-width: 190px;
+    height: 34px;
+    gap: 10px;
+    padding: 24px 48px 24px 16px;
+    border-radius: 7px;
+
+    background: none;
+    color: #909090;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Onest Regular", sans-serif;
+
+    font-size: 18px;
+
+    transition: all 0.3s ease;
+}
+
+.ProfileNavigationMenuButton:hover {
+    background: #F1F4F6;
+    color: #2A7FFF;
+}
+
+.ProfileNavigationMenuButton:active {
+    background: #2A7FFF;
+    color: white;
+}
+
+.ProfileNavigationMenuButton.Active {
+    background: #2A7FFF;
+    color: white;
+}
+
+.ProfileNavigationMenuButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ProfileContentTitle {
+    font-family: "Onest Bold", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+}

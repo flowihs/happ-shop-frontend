@@ -35,7 +35,6 @@ export function AuthCard({initialTab = "login"}: {initialTab?: AuthTab}) {
                         >
                             Забыли пароль?
                         </button>
-                        {/* Передаем activeTab для перерендера */}
                         <SocialLogin activeTab={activeTab} />
                     </>
                 )}
