@@ -1,13 +1,7 @@
-@font-face {
-    font-family: "Onest Regular";
-    src: url("../fonts/onest/Onest-Regular.woff") format("woff");
-    font-weight: 500;
-    font-display: swap;
-}
+@import "./reset.css";
+@import "./fonts.css";
 
-@font-face {
-    font-family: "Onest Bold";
-    src: url("../fonts/onest/Onest-Bold.woff") format("woff");
-    font-weight: 700;
-    font-display: swap;
+
+body {
+    font-family: "Onest Regular", sans-serif;
 }
