@@ -210,7 +210,7 @@
 .NavigationMenuAuthButton {
     color: #909090;
     font-size: 18px;
-    font-family: "Onest Regular", sans-serif;
+    font-family: "Onest Medium", sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 12px 32px;
@@ -246,7 +246,7 @@
     padding: 10px 16px;
     color: #333333;
     font-size: 16px;
-    font-family: "Onest Regular", sans-serif;
+    font-family: "Onest Medium", sans-serif;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.2s ease;
@@ -401,7 +401,7 @@
 .CategoryMenuLeftWrapperItem {
     display: flex;
     gap: 12px;
-    font-family: "Onest Regular", sans-serif;
+    font-family: "Onest Medium", sans-serif;
     transition: all 0.3s ease;
     cursor: pointer;
     padding: 6px 12px;

@@ -14,7 +14,7 @@
 }
 
 .ProfileNavigationMenuTitle {
-    font-family: "Onest Regular", sans-serif;
+    font-family: "Onest Medium", sans-serif;
     font-weight: 600;
     font-size: 32px;
     line-height: 100%;
@@ -27,7 +27,6 @@
     gap: 10px;
     padding: 24px 48px 24px 16px;
     border-radius: 7px;
-
     background: none;
     color: #909090;
     display: flex;
@@ -36,10 +35,8 @@
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: "Onest Regular", sans-serif;
-
+    font-family: "Onest Medium", sans-serif;
     font-size: 18px;
-
     transition: all 0.3s ease;
 }
 
@@ -69,4 +66,266 @@
     font-weight: 600;
     font-size: 24px;
     color: #000000;
+}
+
+.ProfileContent {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 650px;
+    width: 100%;
+}
+
+.ProfileContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ProfileContentItem {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F1F4F6;
+}
+
+.ProfileContentItemTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-self: start;
+}
+
+.ProfileContentItemTitle {
+    font-family: "Onest Medium", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000000;
+}
+
+.ProfileContentItemDescription {
+    font-family: "Onest Regular", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #909090;
+}
+
+.ProfileContentItemInput {
+    background: #F1F4F6;
+    width: 300px;
+    height: 38px;
+    gap: 10px;
+    border-radius: 9px;
+    padding: 8px 15px 8px 14px;
+    outline: none;
+    border: none;
+}
+
+.ProfileContentItemInput:focus {
+    border: 2px solid #2A7FFFCC;
+    outline: none;
+}
+
+.ProfileContentItemInput:focus::placeholder {
+    padding-left: 6px;
+    transition: all 0.3s ease;
+}
+
+.ProfileContentItemChangePasswordButton {
+    cursor: pointer;
+    width: 171px;
+    height: 38px;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 9px 18px;
+    outline: none;
+    border: none;
+    font-family: "Onest Medium", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #909090;
+    transition: all 0.3s ease;
+}
+
+.ProfileContentItemChangePasswordButton:hover {
+    background: #F1F4F6;
+    color: #000000;
+}
+
+.ProfileChangePasswordModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.ProfileChangePasswordModalBackgroundBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+}
+
+.ProfileChangePasswordModalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10100;
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #F1F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.17);
+}
+
+.ProfileChangePasswordModalIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.ProfileChangePasswordModalContentTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.ProfileChangePasswordModalContentTitle {
+    font-family: "Onest SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #000000;
+}
+
+.ProfileChangePasswordModalContentDescription {
+    font-family: "Onest Regular", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #909090;
+}
+
+.ProfileChangePasswordModalContentInput {
+    width: 310px;
+    height: 38px;
+    border-radius: 9px;
+    padding: 8px 9px 8px 14px;
+    outline: none;
+    border: 2px solid transparent;
+    background: #F1F4F6;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.ProfileChangePasswordModalContentInput:focus {
+    border: 2px solid #2A7FFF;
+    box-shadow: 0 0 0 3px rgba(42, 127, 255, 0.1);
+}
+
+.ProfileChangePasswordModalContentInput:focus::placeholder {
+    padding-left: 6px;
+    transition: all 0.3s ease;
+}
+
+.ProfileChangePasswordModalContentInput.Invalid {
+    border: 2px solid #FF3B30;
+    color: #FF3B30;
+}
+
+.ProfileChangePasswordModalContentInput.Invalid::placeholder {
+    color: #FF3B30;
+}
+
+.ProfileChangePasswordModalContentInput.Invalid:focus {
+    border: 2px solid #FF3B30;
+    box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
+}
+
+.ProfileChangePasswordModalButtonsContainer {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.ProfileChangePasswordModalContentCancelButton {
+    cursor: pointer;
+    width: 150px;
+    height: 38px;
+    border-radius: 8px;
+    padding: 9px 20px;
+    outline: none;
+    background: #F1F4F6;
+    color: #666666;
+    font-family: "Onest Medium", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.ProfileChangePasswordModalContentCancelButton:hover {
+    color: black;
+}
+
+.ProfileChangePasswordModalContentNextButton {
+    cursor: pointer;
+    width: 150px;
+    height: 38px;
+    border-radius: 8px;
+    padding: 9px 20px;
+    outline: none;
+    border: none;
+    background: #2A7FFF;
+    color: #FFFFFF;
+    font-family: "Onest Medium", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.ProfileChangePasswordModalContentNextButton:hover {
+    background: #1A6AEE;
+}
+
+.ProfileChangePasswordModalContentInputText {
+    display: none;
+    font-family: "Onest Regular", sans-serif;
+    font-size: 13px;
+    color: #FF3B30;
+    margin-bottom: 2px;
+    text-align: left;
+    width: 100%;
+    padding-left: 4px;
+}
+
+.ProfileChangePasswordModalContentInputText.Invalid {
+    display: block;
+    color: #FF3B30;
+}
+
+.ProfileChangePasswordModalContentInputTextContainer {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
