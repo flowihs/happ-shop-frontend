@@ -10,7 +10,7 @@ export const NavigationMenuModal = ({ isOpen }: NavigationMenuModalProps) => {
 
     return (
         <div className="NavigationMenuModal">
-            <NavigationMenuItem href="/profile" icon={<UserIcon className="NavigationMenuAuthButtonSvg" />}>
+            <NavigationMenuItem href="/settings" icon={<UserIcon className="NavigationMenuAuthButtonSvg" />}>
                 Личный кабинет
             </NavigationMenuItem>
             <NavigationMenuItem icon={<UserIcon className="NavigationMenuAuthButtonSvg" />}>

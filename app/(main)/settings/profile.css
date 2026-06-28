@@ -88,6 +88,7 @@
     justify-content: space-between;
     padding-bottom: 20px;
     border-bottom: 1px solid #F1F4F6;
+    align-items: center;
 }
 
 .ProfileContentItemTextContainer {
@@ -126,6 +127,7 @@
 .ProfileContentItemInput:focus {
     border: 2px solid #2A7FFFCC;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 127, 255, 0.1);
 }
 
 .ProfileContentItemInput:focus::placeholder {
@@ -316,6 +318,7 @@
     text-align: left;
     width: 100%;
     padding-left: 4px;
+    transition: all 0.3s ease;
 }
 
 .ProfileChangePasswordModalContentInputText.Invalid {
@@ -328,4 +331,171 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.ProfileContentItemChangeLanguagesButton {
+    display: flex;
+    gap: 8px;
+    background: none;
+    cursor: pointer;
+    height: auto;
+    border: none;
+    outline: none;
+    align-items: center;
+    color: #909090;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.ProfileContentItemChangeLanguagesButton:hover {
+    color: black;
+    stroke: black;
+    fill: black;
+}
+
+.ProfileContentItemChangeLanguagesButtonSvg {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    border: #909090;
+    transition: all 0.3s ease;
+}
+
+.ProfileContentItemChangeLanguagesButton.Active {
+    color: #2A7FFF;
+    stroke: #2A7FFF;
+}
+
+
+.ProfileContentItemChangeLanguagesButtonSvg.Active {
+    transform: rotate(180deg);
+    stroke: #2A7FFF;
+}
+
+.ProfileContentItemChangeLanguagesModal {
+    background: #FFFFFF;
+    box-shadow: 0px 7px 22px 0px #00000040;
+    padding: 4px;
+    border-radius: 9px;
+
+    position: absolute;
+    top: 26px;
+    right: 0px;
+}
+
+.ProfileContentItemChangeLanguagesModalButton {
+    font-family: "Onest Regular", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 7px 10px;
+    position: relative;
+    width: 100%;
+    min-width: 151px;
+    min-height: 33px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.ProfileContentItemChangeLanguagesModalButton:hover {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%);
+    color: #2A7FFF;
+}
+
+.ProfileContentItemChangeLanguagesButtonContainer {
+    position: relative;
+}
+
+.ProfileContentItemDeleteAccountButton {
+    cursor: pointer;
+    min-width: 164px;
+    height: 38px;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 9px 18px;
+    background: #F1F4F6;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.ProfileContentItemDeleteAccountButton span {
+    font-family: "Onest Regular", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 42, 42, 0.89);
+}
+
+.ProfileContentItemDeleteAccountButton:hover {
+    background: rgba(255, 222, 222, 0.39);
+    color: rgba(255, 42, 42, 1);
+}
+
+.ProfileSaveButton {
+    cursor: pointer;
+    width: 107px;
+    height: 32px;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 6px;
+    padding: 7px 17px;
+    background: #2A7FFF;
+
+    color: #FFFFFF;
+    font-family: "Onest Regular", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    outline: none;
+    border: none;
+}
+
+.ProfileCityDropdown {
+    width: 300px;
+    height: auto;
+    opacity: 1;
+    border-radius: 9px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 7px 22px 0px #00000040;
+    position: absolute;
+    top: 50px;
+
+    z-index: 2000;
+}
+
+.ProfileCityDropdownItem {
+    width: 100%;
+    height: 33px;
+    angle: 0deg;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items:   center;
+    justify-content: start;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.ProfileCityDropdownItem:hover {
+    background: #F1F4F6;
+}
+
+.ProfileCityInputWrapper {
+    position: relative;
 }

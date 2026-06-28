@@ -29,6 +29,7 @@ export function UpdatePasswordModal({ onClose }: UpdatePasswordModalProps) {
     const currentPasswordRef = useRef<HTMLInputElement>(null);
     const newPasswordRef = useRef<HTMLInputElement>(null);
     const confirmPasswordRef = useRef<HTMLInputElement>(null);
+    const modalContentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -40,6 +41,17 @@ export function UpdatePasswordModal({ onClose }: UpdatePasswordModalProps) {
         }, 100);
         return () => clearTimeout(timer);
     }, [isPasswordVerified]);
+
+    useEffect(() => {
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                handleClose();
+            }
+        };
+
+        document.addEventListener("keydown", handleEsc);
+        return () => document.removeEventListener("keydown", handleEsc);
+    }, []);
 
     const updateFormField = (field: keyof PasswordFormState, value: string) => {
         setForm(prev => ({ ...prev, [field]: value }));
@@ -252,7 +264,7 @@ export function UpdatePasswordModal({ onClose }: UpdatePasswordModalProps) {
     return (
         <div className="ProfileChangePasswordModal">
             <div className="ProfileChangePasswordModalBackgroundBlur" onClick={handleClose} />
-            <div className="ProfileChangePasswordModalContent">
+            <div className="ProfileChangePasswordModalContent" ref={modalContentRef}>
                 <ChangePasswordModalIcon />
 
                 <div className="ProfileChangePasswordModalContentTextContainer">

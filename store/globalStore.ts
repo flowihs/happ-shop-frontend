@@ -1,62 +1,73 @@
-import { userServices } from "@/lib/helpers/getMyProfile";
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import {userServices} from "@/lib/helpers/getMyProfile";
+import {create} from "zustand";
+import {persist} from "zustand/middleware";
+
+export interface Settings {
+    id: number;
+    language: string;
+    city: string | null;
+    createdAt?: string;
+    updatedAt?: string;
+}
 
 export interface User {
-  username: string;
-  email: string;
+    id: number;
+    username: string;
+    email: string;
+    role: string;
+    settings: Settings;
 }
 
 interface GlobalStore {
-  isLoading: boolean;
-  error: string | null;
-  user: User | null;
+    isLoading: boolean;
+    error: string | null;
+    user: User | null;
 
-  setLoading: (bool: boolean) => void;
-  setError: (err: string | null) => void;
+    setLoading: (bool: boolean) => void;
+    setError: (err: string | null) => void;
 
-  setUser: (user: User) => void;
-  clearUser: () => void;
+    setUser: (user: User) => void;
+    clearUser: () => void;
 
-  handleLogout: () => Promise<void>;
-  updateUser: () => Promise<void>;
+    handleLogout: () => Promise<void>;
+    updateUser: () => Promise<void>;
 }
 
 export const useGlobalStore = create<GlobalStore>()(
-  persist(
-    (set, get) => ({
-      isLoading: false,
-      error: null,
-      user: null,
+    persist(
+        (set, get) => ({
+            isLoading: false,
+            error: null,
+            user: null,
 
-      setLoading: (bool) => set({ isLoading: bool }),
-      setError: (err) => set({ error: err }),
+            setLoading: (bool) => set({isLoading: bool}),
+            setError: (err) => set({error: err}),
 
-      setUser: (user) => set({ user }),
-      clearUser: () => set({ user: null }),
+            setUser: (user) => set({user}),
+            clearUser: () => set({user: null}),
 
-      handleLogout: async () => {
-        try {
-          set({ isLoading: true, error: null });
+            handleLogout: async () => {
+                try {
+                    set({isLoading: true, error: null});
 
-          await userServices.logout();
+                    await userServices.logout();
 
-          get().clearUser();
-        } catch (error) {
-          console.error(error);
-          set({ error: "ошибка при выходе из аккаунта" });
-        } finally {
-          set({ isLoading: false });
-        }
-      },
+                    get().clearUser();
+                } catch (error) {
+                    console.error(error);
+                    set({error: "ошибка при выходе из аккаунта"});
+                } finally {
+                    set({isLoading: false});
+                }
+            },
 
-      updateUser: async () => {
-        const profile = await userServices.getMyProfile();
-        set({ user: profile });
-      },
-    }),
-    {
-      name: "global-storage",
-    },
-  ),
+            updateUser: async () => {
+                const profile = await userServices.getMyProfile();
+                set({user: profile});
+            },
+        }),
+        {
+            name: "global-storage",
+        },
+    ),
 );
