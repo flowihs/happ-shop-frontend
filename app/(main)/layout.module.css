@@ -1,0 +1,149 @@
+.header {
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #F1F4F6;
+  background: #FAFAFCCC;
+  backdrop-filter: blur(15px);
+
+}
+
+.container {
+  padding: 14px 35px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.logo img {
+  width: 25px;
+  height: 24px;
+}
+
+.logo span {
+  font-size: 1rem;
+  color: #000;
+}
+
+.nav {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.active {
+  color: #000;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav li {
+
+}
+
+.nav a {
+  color: #909090;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav .active {
+  color: #000;
+}
+
+.search {
+  position: relative;
+  max-width: 400px;
+  transition: all ease 0.5s;
+  width: 100%;
+}
+
+.search:focus-within {
+  border-color: #2a7fff;
+  box-shadow: 0 12px 28px rgba(42, 127, 255, 0.14);
+}
+
+.search img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.55;
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  flex-shrink: 0;
+}
+
+.search input {
+  padding-left: 15px;
+  line-height: 38px;
+  font-size: 1rem;
+  position: relative;
+  padding-right: 14px;
+  width: 100%;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: 2px solid #2A7FFFCC;
+  border-radius: 38px;
+
+  background: #F1F4F6;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+
+  transition: all 0.3s ease;
+  outline: none;
+  background: none;
+  color: #111827;
+  caret-color: #2a7fff;
+
+  font-family: "Onest Regular", sans-serif;
+  background: transparent;
+}
+
+.search input::placeholder {
+  color: #909090;
+}
+
+.actions {
+  margin-left: 26px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+  border-radius: 14px;
+
+  color: #ffffff;
+  background: #2a7fff;
+
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Onest Regular", sans-serif;
+  white-space: nowrap;
+
+  box-shadow: 0 10px 24px rgba(42, 127, 255, 0.22);
+  transition: all 0.3s ease;
+}
+
+.actions a:hover {
+  background: #155ee8;
+  box-shadow: 0 14px 28px rgba(42, 127, 255, 0.3);
+  transform: translateY(-1px);
+}
