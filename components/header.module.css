@@ -4,7 +4,6 @@
   border-bottom: 1px solid #F1F4F6;
   background: #FAFAFCCC;
   backdrop-filter: blur(15px);
-  margin-bottom: 35px;
 }
 
 .container {
@@ -68,7 +67,7 @@
 }
 
 .search input:focus {
-  border-color: #2a7fff;
+  border: 2px solid #2A7FFFCC;
   box-shadow: 0 12px 28px rgba(42, 127, 255, 0.14);
 }
 
@@ -94,8 +93,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-
-  border: 2px solid #2A7FFFCC;
+  border: 2px solid #b5b7b8;
   border-radius: 38px;
 
   background: #F1F4F6;
